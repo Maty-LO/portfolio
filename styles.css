@@ -1,115 +1,147 @@
-/* --- STYLE GLOBAL --- */
-body {
-    font-family: Arial, Helvetica, sans-serif;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
     color: #333;
 }
 
-/* --- MENU DE NAVIGATION --- */
-nav {
-    background: #333;
-    padding: 15px 0;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #0f0f0f;
+    color: #fff;
 }
 
-nav ul {
+.navbar ul {
+    display: flex;
     list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.navbar ul li a:hover,
+.active {
+    color: #2EDACD;
+}
+
+/* SECTION ACCUEIL */
+.accueil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+}
+
+.accueil h1 {
+    font-size: 32px;
+    max-width: 500px;
+}
+
+.highlight {
+    color: #2EDACD;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #2EDACD;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #25b6a9;
+}
+
+/* À propos */
+.apropos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    background: #F7F7F7;
+}
+
+.apropos img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #2EDACD;
+}
+
+/* Projets */
+.projets {
+    text-align: center;
+    padding: 80px 100px;
+}
+
+.cartes {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+    gap: 25px;
+    margin-top: 40px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 17px;
-    transition: 0.3s;
+.carte {
+    width: 250px;
+    padding: 20px;
+    background: #F7F7F7;
+    border-radius: 10px;
 }
 
-nav ul li a:hover {
-    color: #00c4cc;   /* couleur turquoise */
+.carte span {
+    display: block;
+    margin: 10px 0;
+    color: #2EDACD;
 }
 
-/* --- TITRES --- */
-h1, h2 {
+/* Compétences */
+.competences {
+    padding: 80px 100px;
+    background: #F7F7F7;
     text-align: center;
-    color: #222;
 }
 
-/* --- CONTENU DES PAGES --- */
-section, p, ul {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
 }
 
-/* --- LISTES --- */
-ul li {
-    margin: 8px 0;
+.skills-box {
+    width: 40%;
 }
 
-/* --- FORMULAIRE DE CONTACT --- */
-form {
-    max-width: 500px;
-    background: white;
-    padding: 25px;
-    margin: 25px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-form label {
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #bbb;
+.bar {
+    background: #ddd;
+    height: 10px;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
-button {
-    background: white;
-    color: blueviolet;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #009fa3;
-}
-
-/* --- RESPONSIVE (mobile) --- */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-projet {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.projet:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 12px rgba(0, 200, 200, 0.4);
+.bar div {
+    background: #2EDACD;
+    height: 10px;
+    border-radius: 5px;
 }
